@@ -2,465 +2,402 @@
 
 **VOIS AICTE Internship Major Project**
 
-**Author:** Ajithkumar HM
+**Author:** Ajithkumar HM  
+**Domain:** Data Analytics & Agriculture
 
----
+## Live Demo
 
-## 🚀 Live Demo
-
-🌐 **Live Application:**  
 https://seasonal-agriculture-frontend.onrender.com
 
-🔗 **GitHub Repository:**  
+## GitHub Repository
+
 https://github.com/Ajith-Kumar55/Seasonal-Agriculture-Performance-Analysis
 
 ---
 
-## 📌 Project Overview
+## 1. Project Overview
 
-This project is a comprehensive **Data Analytics Project** submitted for the **VOIS AICTE Internship Major Project**.
+Seasonal Agriculture Performance Analysis is a full-stack data analytics project developed as part of the VOIS AICTE Internship Major Project.
 
-The primary objective of this study is to perform a rigorous empirical analysis of seasonal agricultural performance across Indian farming cycles, evaluating agronomic productivity, financial returns, water-use efficiency, environmental relationships, and inferential statistical differences across growing seasons and crop species.
+The project analyzes agricultural performance across Kharif, Rabi, and Zaid seasons using historical agricultural data.
 
-An interactive full-stack web dashboard built using **React, TypeScript, Vite, Tailwind CSS, Recharts, FastAPI, and Scikit-Learn** serves as the interactive presentation layer for the completed data analytics study.
+The system studies crop productivity, profitability, operating cost, revenue, water-use efficiency, environmental relationships, regional performance, statistical differences, and machine-learning-based yield prediction.
 
-The dashboard enables users to explore dataset observations, statistical analysis, agricultural performance indicators, and machine-learning-based crop yield predictions.
-
----
-
-## 🎯 Problem Statement & Objectives
-
-### Problem Statement
-
-Agricultural productivity and farm profitability vary across cropping seasons due to differences in rainfall, temperature, input costs, irrigation practices, and other environmental and operational conditions.
-
-Understanding these observed variations can support evidence-based agricultural analysis and help stakeholders evaluate seasonal performance, resource utilization, and financial outcomes.
-
-### Core Objectives
-
-1. **Understand & Inspect Data**  
-   Conduct a thorough audit of raw agricultural dataset attributes, distributions, and missing observation patterns.
-
-2. **Data Preparation & Cleaning**  
-   Apply deterministic yield reconstruction and season/crop-grouped median imputations while preserving the original data structure.
-
-3. **Analyze Seasonal Variation**  
-   Evaluate variation in crop yield, revenue, operating cost, net profit, and weather parameters across Kharif, Rabi, and Zaid seasons.
-
-4. **Investigate Environmental Relationships**  
-   Assess relationships between rainfall, temperature, atmospheric humidity, soil moisture, and agricultural outcomes using correlation techniques.
-
-5. **Compare Relevant Groups**  
-   Analyze agricultural performance across 8 crop species, 3 growing seasons, 4 irrigation modalities, and regional clusters.
-
-6. **Identify Significant Differences**  
-   Conduct inferential hypothesis testing using Kruskal-Wallis, Chi-Square, and Two-Way Factorial ANOVA.
-
-7. **Apply Statistical & Visualization Techniques**  
-   Employ descriptive statistics, effect-size estimation, correlation analysis, heatmaps, and interactive visualizations.
-
-8. **Machine Learning Predictive Modeling**  
-   Develop and evaluate Linear Regression, Random Forest, and Gradient Boosting models as an additional analytical component for estimating crop yield.
-
-9. **Interpret Findings & Develop Recommendations**  
-   Translate statistical findings into evidence-based recommendations for farmers, agricultural extension services, policy makers, and other stakeholders.
+The analytical results are presented through an interactive web dashboard built with React and supported by a FastAPI backend.
 
 ---
 
-## 📊 Dataset Description
+## 2. Problem Statement
 
-The analysis is conducted on the supplied agricultural performance dataset containing:
+Agricultural performance varies across seasons, crops, geographic regions, environmental conditions, irrigation practices, and input usage.
 
-- **Total Records:** `4,000`
-- **Total Attributes:** `28`
-- **Crop Species:** 8
-  - Wheat
-  - Rice
-  - Maize
-  - Cotton
-  - Pulses
-  - Groundnut
-  - Chilli
-  - Sugarcane
-- **Cropping Seasons:** 3
-  - Kharif
-  - Rabi
-  - Zaid
-- **Geographic Coverage:** 8 States and 10 Districts
-- **Irrigation Modalities:** 4
-  - Drip
-  - Flood
-  - Rainfed
-  - Sprinkler
+Analyzing these factors using agricultural data can help identify observed patterns in productivity, profitability, resource utilization, and environmental relationships.
+
+This project provides an interactive analytical platform for exploring these patterns and supporting evidence-based agricultural decision-making.
+
+The project uses a non-causal analytical approach. Observed relationships and statistical differences are not interpreted as proof of causation.
 
 ---
 
-## 🧹 Data Cleaning & Preprocessing Methodology
+## 3. Objectives
 
-The notebook and backend data service execute transparent data preparation steps.
-
-### 1. Deterministic Yield Reconstruction
-
-`32` missing values in `Yield_Tonnes_Ha` were reconstructed using:
-
-**Yield (t/ha) = Production (Tonnes) / Farm Area (Hectares)**
-
-### 2. Season-Grouped Median Imputation
-
-`48` missing values in `Rainfall_mm` were imputed using the median rainfall of the corresponding season.
-
-### 3. Season & Crop-Grouped Median Imputation
-
-`40` missing values in `Soil_Moisture_pct` were imputed using the median of the corresponding Season × Crop group.
-
-### 4. Derived Per-Hectare Metrics
-
-The analysis derives:
-
-- Revenue per Hectare
-- Cost per Hectare
-- Profit per Hectare
-- Relative Yield Index (RYI)
-- Profitability Status
-
-These metrics support comparison across farms of different sizes.
+- Analyze agricultural performance across different seasons.
+- Compare performance across crop categories.
+- Study yield, revenue, operating cost, and net profit.
+- Analyze water-use efficiency across irrigation methods and seasons.
+- Explore relationships between environmental variables and agricultural outcomes.
+- Perform statistical hypothesis testing.
+- Analyze regional agricultural performance.
+- Develop a machine-learning model for yield prediction.
+- Visualize analytical results through an interactive dashboard.
+- Generate evidence-based recommendations from observed results.
 
 ---
 
-## 📈 Analysis Performed
+## 4. Dataset
 
-The project covers the following analytical domains:
+The dataset contains:
 
-1. **Exploratory Data Analysis (EDA)**
-   - Summary statistics
-   - Distribution analysis
-   - Skewness analysis
-   - Missing-value analysis
+- 4,000 agricultural records
+- 28 variables
+- 8 crop categories
+- 3 agricultural seasons
 
-2. **Crop Performance Analysis**
-   - Yield
-   - Revenue
-   - Cost
-   - Profitability
-   - Relative Yield Index
+### Crop Categories
 
-3. **Seasonal Analysis**
-   - Kharif
-   - Rabi
-   - Zaid
+- Rice
+- Wheat
+- Maize
+- Cotton
+- Pulses
+- Groundnut
+- Chilli
+- Sugarcane
 
-4. **Regional Analysis**
-   - Regional agricultural performance
-   - Yield comparison
-   - Profit-per-hectare comparison
+### Seasons
 
-5. **Profitability Analysis**
-   - Operating loss rate
-   - Revenue
-   - Cost
-   - Profit per hectare
+- Kharif
+- Rabi
+- Zaid
 
-6. **Water & Irrigation Analysis**
-   - Water efficiency
-   - Water consumption
-   - Irrigation modality comparison
+### Major Variables
 
-7. **Environmental Analysis**
-   - Rainfall
-   - Temperature
-   - Humidity
-   - Soil moisture
-   - Soil type
-
-8. **Correlation Analysis**
-   - Pearson correlation
-   - Spearman rank correlation
-
-9. **Inferential Statistical Tests**
-   - Kruskal-Wallis
-   - Chi-Square
-   - Two-Way Factorial ANOVA
-
-10. **Machine Learning Yield Prediction**
-    - Linear Regression
-    - Random Forest Regressor
-    - Gradient Boosting Regressor
+- Crop
+- Season
+- State
+- District
+- Area
+- Production
+- Yield
+- Rainfall
+- Temperature
+- Humidity
+- Soil Moisture
+- Irrigation Method
+- Water Usage
+- Fertilizer Usage
+- Pesticide Usage
+- Disease/Pest Risk
+- Revenue
+- Operating Cost
+- Net Profit
 
 ---
 
-## 🔬 Inferential Statistical Hypothesis Testing
+## 5. Data Preprocessing
 
-Statistical tests were selected according to the characteristics of the dataset and the analytical objectives.
+The dataset was inspected for missing values and data-quality issues before analysis.
 
-### 1. Kruskal-Wallis Test
+Missing observations were identified in:
 
-The Kruskal-Wallis test evaluates differences in seasonal net profit distributions.
+- Rainfall
+- Soil Moisture
+- Yield
 
-**Result:**
+### Rainfall
 
-- H = `101.93`
-- p < `0.001`
-- Result: Statistically significant difference across seasons.
+Missing rainfall values were handled using season-level median imputation.
 
-### 2. Chi-Square Test of Independence
+### Soil Moisture
 
-The Chi-Square test evaluates the association between season and profitability status.
+Missing soil-moisture values were handled using season × crop-group median imputation.
 
-**Result:**
+### Yield
 
-- χ² = `92.65`
-- Degrees of freedom = `2`
-- p < `0.001`
-- Cramer's V = `0.1522`
+Where required, yield was reconstructed using:
 
-The result indicates a statistically significant association between season and profitability status in the analyzed dataset.
+Yield = Production / Area
 
-### 3. Two-Way Factorial ANOVA — Log Yield
-
-**Crop Main Effect**
-
-- F = `1378.36`
-- p < `0.001`
-
-**Season Main Effect**
-
-- F = `66.33`
-- p < `0.001`
-
-**Crop × Season Interaction**
-
-- F = `0.72`
-- p = `0.7544`
-- Not statistically significant
-
-### 4. Correlation Analysis
-
-#### Pearson Correlation
-
-**Fertilizer Usage vs Operating Cost**
-
-- r = `0.5476`
-- p < `0.001`
-
-This indicates a positive association between fertilizer usage and operating cost in the analyzed dataset. It does not establish a causal effect on net profit.
-
-**Rainfall vs Soil Moisture**
-
-- r = `0.5200`
-- p < `0.001`
-
-#### Spearman Correlation
-
-**Atmospheric Humidity vs Disease/Pest Risk**
-
-- ρ = `0.5517`
-- p < `0.001`
-
-**Seasonal Rainfall vs Crop Yield**
-
-- ρ = `0.1295`
-- p < `0.001`
-
-These correlations describe observed associations and should not be interpreted as proof of causation.
+The preprocessing process retained the available observations and prepared the dataset for statistical analysis and machine learning.
 
 ---
 
-## 🤖 Machine Learning Yield Prediction
+## 6. Data Analysis
 
-Machine-learning regression models were developed as an **additional analytical component** of the project.
+The application provides the following analytical modules:
 
-The models were trained using an 80/20 train-test split with `random_state=42`.
+### Dashboard
 
-### Model Comparison
+Provides an overall view of major agricultural indicators and dataset information.
 
-| Machine Learning Model | MAE | RMSE | R² Score | Rank |
-|---|---:|---:|---:|---|
-| **Gradient Boosting Regressor** | **0.7666** | **2.2181** | **0.9745** | 🥇 Best |
-| Random Forest Regressor | 0.7735 | 2.6997 | 0.9622 | 🥈 Second |
-| Linear Regression | 2.3194 | 6.0985 | 0.8071 | 🥉 Baseline |
+### Crop Performance
 
-### Cross-Validation
+Compares agricultural performance across crop categories using yield, revenue, operating cost, net profit, and water-use efficiency.
 
-| Model | Mean R² | Standard Deviation |
-|---|---:|---:|
-| **Gradient Boosting Regressor** | **0.9712** | ±0.0015 |
-| Random Forest Regressor | 0.9631 | ±0.0057 |
-| Linear Regression | 0.8076 | ±0.0185 |
+### Seasonal Analysis
+
+Compares Kharif, Rabi, and Zaid seasons using agricultural and financial indicators.
+
+### Regional Analysis
+
+Explores agricultural performance across the geographic regions represented in the dataset.
+
+### Profitability Analysis
+
+Analyzes revenue, operating cost, net profit, profitability classification, and loss-making observations.
+
+### Water & Irrigation
+
+Analyzes water usage and water-use efficiency across irrigation methods and seasons.
+
+### Environmental Analysis
+
+Explores relationships involving rainfall, temperature, humidity, soil moisture, disease/pest risk, and yield.
+
+### Correlation Matrix
+
+Provides Pearson and Spearman correlation analysis for relevant numerical variables.
+
+### Statistical Tests
+
+Presents statistical hypothesis-testing results.
+
+### Recommendations
+
+Provides evidence-based recommendations based on observed analytical results.
+
+### ML Yield Prediction
+
+Provides machine-learning-based agricultural yield prediction.
+
+---
+
+## 7. Key Findings
+
+### Overall Performance
+
+- Total records: 4,000
+- Total variables: 28
+- Mean yield: 5.26284 tonnes/ha
+- Mean profit: ₹13,555.02/ha
+- Loss-making observations: 1,966
+- Observed loss rate: 49.15%
+
+### Mean Profit by Season
+
+| Season | Mean Profit/ha |
+|---|---:|
+| Kharif | ₹21,881.81 |
+| Rabi | ₹10,361.68 |
+| Zaid | -₹2,636.52 |
+
+Zaid recorded the highest observed operating-loss rate at 64.48%.
+
+These values describe the observed dataset and do not establish that season alone causes profitability differences.
+
+---
+
+## 8. Correlation Analysis
+
+### Rainfall vs Soil Moisture
+
+Pearson r = 0.5200
+
+This indicates a moderate positive observed linear association.
+
+### Rainfall vs Yield
+
+Spearman ρ = 0.1295
+
+This indicates a weak positive monotonic association.
+
+### Humidity vs Disease/Pest Risk
+
+Spearman ρ = 0.5517
+
+This indicates a moderate positive monotonic association.
+
+### Fertilizer Usage vs Operating Cost
+
+Pearson r = 0.5476  
+p < 0.001
+
+This indicates a positive observed association between fertilizer usage and operating cost.
+
+Correlation does not establish causation.
+
+---
+
+## 9. Statistical Analysis
+
+The project uses:
+
+- Pearson Correlation
+- Spearman Correlation
+- Kruskal-Wallis Test
+- Chi-Square Test
+- Cramér's V
+- Two-Way ANOVA
+
+### Kruskal-Wallis Test
+
+Profit vs Season:
+
+- H = 101.93
+- p = 7.36 × 10⁻²³
+
+The result indicates statistically significant differences in observed profit distributions across seasons.
+
+### Chi-Square: Season vs Profitability
+
+- χ² = 92.65
+- p = 7.62 × 10⁻²¹
+- Cramér's V = 0.1522
+
+The result indicates a statistically significant association between season and profitability category.
+
+### Chi-Square: Profitability vs Crop
+
+- χ² = 669.75
+- Cramér's V = 0.4092
+
+The result indicates a statistically significant association between crop category and profitability classification.
+
+---
+
+## 10. Two-Way ANOVA — Yield
+
+The analysis uses log-transformed yield values.
+
+### Crop Effect
+
+- F ≈ 1378.36
+- p < 0.001
+- η² ≈ 0.708
+
+### Season Effect
+
+- F ≈ 66.33
+- p < 0.001
+
+### Crop × Season Interaction
+
+- F = 0.722
+- p = 0.754
+
+The crop and season effects were statistically significant, while the crop × season interaction was not statistically significant.
+
+These results describe statistical differences in the observed dataset and do not establish causal effects.
+
+---
+
+## 11. Two-Way ANOVA — Water-Use Efficiency
+
+The analysis uses log-transformed water-efficiency values.
+
+### Irrigation Method Effect
+
+- F ≈ 171.28
+- p < 0.001
+
+### Season Effect
+
+- F ≈ 22.63
+- p < 0.001
+
+### Irrigation × Season Interaction
+
+- F = 1.213
+- p = 0.296
+
+The analysis indicates statistically significant differences in observed water efficiency across irrigation methods and seasons.
+
+The irrigation × season interaction was not statistically significant.
+
+These results do not establish that a specific irrigation method causes higher water efficiency.
+
+---
+
+## 12. Machine Learning
+
+The project includes machine-learning-based agricultural yield prediction.
 
 ### Selected Model
 
-The **Gradient Boosting Regressor** achieved the highest test-set R² and the lowest RMSE and MAE among the evaluated models.
+**Gradient Boosting Regressor**
 
-The live dashboard uses Gradient Boosting for yield prediction and displays its feature-importance information.
+### Model Performance
 
----
+| Metric | Result |
+|---|---:|
+| R² | 0.9745 |
+| RMSE | 2.2181 |
+| MAE | 0.7666 |
+| 5-Fold CV R² | 0.9712 ± 0.0015 |
 
-## 💡 Key Empirical Findings
+The Gradient Boosting Regressor was selected based on the evaluated model performance.
 
-### 1. Seasonal Financial Performance
+### Feature Importance
 
-**Kharif Season**
+The dashboard displays:
 
-- Mean profit per hectare: approximately `₹21,881.81`
-- Loss rate: approximately `42.21%`
+**Gradient Boosting Feature Importance Weights**
 
-**Rabi Season**
-
-- Mean profit per hectare: approximately `₹10,361.68`
-- Loss rate: approximately `51.14%`
-
-**Zaid Season**
-
-- Mean profit per hectare: approximately `-₹2,636.52`
-- Loss rate: approximately `64.48%`
-
-Zaid records the highest observed operating loss rate among the three seasons.
-
-### 2. Overall Profitability
-
-Out of `4,000` observations:
-
-- `1,966` farms were classified as operating at a loss.
-- Overall loss rate: `49.15%`
-
-### 3. Water Efficiency
-
-The overall mean water efficiency is approximately:
-
-`5.39 t/1,000 m³`
-
-Observed water-efficiency differences across irrigation modalities were statistically significant in the analysis.
-
-These results describe observed differences in the dataset and should not be interpreted as proof that one irrigation method universally causes higher agricultural performance.
+Feature importance represents the contribution of features to the trained model's predictive process. It does not establish causal influence.
 
 ---
 
-## ⚠️ Crop Yield Scale Disclaimer & Limitations
+## 13. Evidence-Based Recommendations
 
-### Crop Yield Scale Disclaimer
-
-Sugarcane has a substantially higher observed yield value than several grain, pulse, oilseed, and spice crops because of differences in crop biomass and measurement scale.
-
-Therefore, direct cross-crop comparisons of raw tonnes per hectare should be interpreted carefully.
-
-The project uses the **Relative Yield Index (RYI)** as an additional comparison measure to reduce the effect of differences in crop-specific yield scales.
-
-### Analytical Limitations
-
-1. **Correlation vs. Causation**
-
-   Statistical relationships indicate association or co-variation and do not establish direct causal mechanisms.
-
-2. **Dataset Sample Scope**
-
-   Findings reflect the specific `4,000` observations provided for the internship assignment.
-
-3. **Regional Analysis**
-
-   Regional clustering in the dashboard should be interpreted according to the project's defined regional assignment methodology.
-
-4. **Machine Learning**
-
-   The ML model is an analytical prediction component and should not be interpreted as a guarantee of future agricultural outcomes.
-
----
-
-## 🌿 Evidence-Based Recommendations
-
-### 1. Evaluate Irrigation Systems for Water-Efficiency Improvement
+### Recommendation 1
 
 **Target Audience:** Farmers & Agricultural Extension
 
-**Description:**
+**Title:** Evaluate Irrigation Systems for Water-Efficiency Improvement
 
-Compare irrigation practices based on observed water-efficiency outcomes and local farm conditions rather than assuming one method is universally superior.
+**Recommendation:** Compare irrigation practices based on observed water-efficiency outcomes and local farm conditions rather than assuming one method is universally superior.
 
-**Rationale:**
+**Rationale:** Two-Way ANOVA indicates statistically significant differences in water efficiency across irrigation methods (p < 0.001).
 
-Two-Way ANOVA indicates statistically significant differences in water efficiency across irrigation methods (p < 0.001).
+**Expected Outcome:** Supports evidence-based evaluation of irrigation practices and water-management decisions.
 
-**Expected Outcome:**
-
-Supports evidence-based evaluation of irrigation practices and water-management decisions.
-
----
-
-### 2. Implement Soil-Testing-Based Fertilizer Management
+### Recommendation 2
 
 **Target Audience:** Policy Makers & Co-operatives
 
-**Description:**
+**Title:** Implement Soil-Testing-Based Fertilizer Management
 
-Promote soil testing before fertilizer application to support more targeted nutrient management and avoid unnecessary fertilizer use.
+**Recommendation:** Promote soil testing before fertilizer application to support more targeted nutrient management and avoid unnecessary fertilizer use.
 
-**Rationale:**
+**Rationale:** Fertilizer usage is positively associated with operating cost (Pearson r = 0.5476, p < 0.001), without establishing a causal effect on net profit.
 
-Fertilizer usage is positively associated with operating cost (Pearson r = 0.5476, p < 0.001), without establishing a causal effect on net profit.
+**Expected Outcome:** Supports more targeted fertilizer-management decisions and cost evaluation.
 
-**Expected Outcome:**
-
-Supports more targeted fertilizer-management decisions and cost evaluation.
-
----
-
-### 3. Evaluate Zaid Cropping Patterns and Water Requirements
+### Recommendation 3
 
 **Target Audience:** Farmers & Policy Planners
 
-**Description:**
+**Title:** Evaluate Zaid Cropping Patterns and Water Requirements
 
-Review crop selection and water requirements during the Zaid season using observed profitability and seasonal conditions.
+**Recommendation:** Review crop selection and water requirements during the Zaid season using observed profitability and seasonal conditions.
 
-**Rationale:**
+**Rationale:** Zaid records the highest observed operating loss rate among the three seasons (64.48%).
 
-Zaid records the highest observed operating loss rate among the three seasons (64.48%).
-
-**Expected Outcome:**
-
-Supports seasonal crop-planning and water-management decisions.
+**Expected Outcome:** Supports seasonal crop-planning and water-management decisions.
 
 ---
 
-## 🔮 Future Scope
-
-Possible future extensions include:
-
-- Integration of multi-year agricultural datasets
-- Satellite remote-sensing and NDVI data
-- Real-time local mandi price feeds
-- Additional regional agricultural datasets
-- More advanced time-series forecasting
-- Deployment of PostgreSQL for larger-scale data storage
-- Additional explainability techniques for ML predictions
-
----
-
-## 🛠️ Technologies Used
-
-### Data Processing & Analytics
-
-- Python
-- Pandas
-- NumPy
-- SciPy
-- Statsmodels
-- Jupyter Notebook
-
-### Machine Learning
-
-- Scikit-Learn
-- Linear Regression
-- Random Forest
-- Gradient Boosting
-- ML Pipelines
-- Column Transformers
-
-### Backend
-
-- FastAPI
-- Uvicorn
-- Pydantic
-- Python
+## 14. Technology Stack
 
 ### Frontend
 
@@ -469,22 +406,49 @@ Possible future extensions include:
 - Vite
 - Tailwind CSS
 - Recharts
-- Lucide Icons
+
+### Backend
+
+- Python
+- FastAPI
+- Uvicorn
+
+### Data Analytics
+
+- Pandas
+- NumPy
+- SciPy
+
+### Machine Learning
+
+- Scikit-Learn
+- Gradient Boosting Regressor
+- Joblib
+
+### Development
+
+- Jupyter Notebook
+- Visual Studio Code
+- Git
+- GitHub
+
+### Deployment
+
+- Render
 
 ---
 
-## 🏗️ Project Structure
+## 15. Project Structure
 
-```text
 Seasonal_Agriculture_Performance_Analysis/
 │
 ├── backend/
 │   ├── app/
+│   │   ├── __init__.py
 │   │   ├── api.py
 │   │   ├── data_service.py
 │   │   ├── ml_service.py
-│   │   ├── stats_service.py
-│   │   └── __init__.py
+│   │   └── stats_service.py
 │   │
 │   ├── main.py
 │   └── requirements.txt
@@ -492,100 +456,209 @@ Seasonal_Agriculture_Performance_Analysis/
 ├── frontend/
 │   ├── src/
 │   │   ├── api/
+│   │   │   └── client.ts
 │   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.tsx
-│   │   └── main.tsx
+│   │   └── pages/
+│   │       ├── CropPerformancePage.tsx
+│   │       ├── SeasonalAnalysisPage.tsx
+│   │       ├── RegionalAnalysisPage.tsx
+│   │       ├── ProfitabilityAnalysisPage.tsx
+│   │       ├── WaterIrrigationPage.tsx
+│   │       ├── EnvironmentalAnalysisPage.tsx
+│   │       ├── CorrelationMatrixPage.tsx
+│   │       ├── StatisticalTestsPage.tsx
+│   │       ├── RecommendationsPage.tsx
+│   │       └── MlPredictionPage.tsx
 │   │
 │   ├── package.json
 │   ├── package-lock.json
-│   └── vite.config.ts
+│   ├── tsconfig.json
+│   ├── vite.config.ts
+│   └── ...
 │
 ├── Seasonal_Agriculture_Performance_Analysis.ipynb
 ├── seasonal_agriculture_performance_dataset.csv
 ├── README.md
 └── Seasonal_Agriculture_Performance_Analysis_VOIS_Final.pptx
-```
 
 ---
 
-## 💻 Running the Application Locally
+## 16. System Workflow
 
-### 1. Start FastAPI Backend
-
-```bash
-cd backend
-pip install -r requirements.txt
-python main.py
-```
-
-Backend:
-
-```text
-http://127.0.0.1:8000
-```
-
-Swagger API documentation:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-### 2. Start Frontend
-
-Open another terminal:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-The Vite development server will display the local URL in the terminal.
+Raw Agricultural Dataset
+        ↓
+Data Inspection
+        ↓
+Data Cleaning & Preprocessing
+        ↓
+Exploratory Data Analysis
+        ↓
+Crop Performance Analysis
+        ↓
+Seasonal Analysis
+        ↓
+Regional Analysis
+        ↓
+Profitability Analysis
+        ↓
+Water & Irrigation Analysis
+        ↓
+Environmental Analysis
+        ↓
+Correlation Analysis
+        ↓
+Statistical Testing
+        ↓
+Machine Learning
+        ↓
+Model Evaluation
+        ↓
+Evidence-Based Recommendations
+        ↓
+FastAPI Backend
+        ↓
+React Frontend
+        ↓
+Interactive Dashboard
+        ↓
+Cloud Deployment
 
 ---
 
-## 🌐 Production Deployment
-
-### Frontend
-
-Live application:
-
-```text
-https://seasonal-agriculture-frontend.onrender.com
-```
+## 17. Running the Project Locally
 
 ### Backend
 
-Production API:
+Open a terminal in the project directory and run:
 
-```text
-https://seasonal-agriculture-api.onrender.com
-```
+cd backend
 
-API endpoint:
+Create a virtual environment:
 
-```text
-https://seasonal-agriculture-api.onrender.com/api
-```
+python -m venv venv
+
+Activate it on Windows:
+
+venv\Scripts\activate
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Start the backend:
+
+uvicorn main:app --reload
+
+Backend URL:
+
+http://127.0.0.1:8000
+
+API URL:
+
+http://127.0.0.1:8000/api
+
+### Frontend
+
+Open another terminal and navigate to:
+
+cd frontend
+
+Install dependencies:
+
+npm install
+
+Start the frontend:
+
+npm run dev
+
+The Vite terminal will display the local frontend URL.
 
 ---
 
-## 🔐 Analytical Methodology
+## 18. Production Deployment
 
-This project follows a **Strict Non-Causal Interpretation** approach.
+### Frontend
 
-The statistical analyses identify:
+https://seasonal-agriculture-frontend.onrender.com
 
-- observed differences
-- statistical significance
-- correlations
-- associations
-- predictive relationships
+### Backend
 
-They do **not** independently establish that one agricultural factor directly causes another.
+https://seasonal-agriculture-api.onrender.com
 
-Recommendations are therefore framed as evidence-based evaluation or decision-support suggestions rather than guaranteed outcomes.
+### API
+
+https://seasonal-agriculture-api.onrender.com/api
+
+The frontend communicates with the deployed FastAPI backend through the production API.
+
+---
+
+## 19. Notebook
+
+The main analytical notebook is:
+
+Seasonal_Agriculture_Performance_Analysis.ipynb
+
+The notebook contains:
+
+- Data loading
+- Data inspection
+- Data cleaning
+- Exploratory analysis
+- Crop analysis
+- Seasonal analysis
+- Regional analysis
+- Profitability analysis
+- Water and irrigation analysis
+- Environmental analysis
+- Correlation analysis
+- Statistical testing
+- Machine learning
+- Model evaluation
+- Analytical conclusions
+
+---
+
+## 20. Interpretation Guidelines
+
+This project follows a strict non-causal analytical approach.
+
+- Correlation is not treated as causation.
+- Statistical differences are not automatically interpreted as causal effects.
+- Machine-learning feature importance is not interpreted as causal influence.
+- Observed seasonal differences do not prove that season alone causes profitability differences.
+- Observed irrigation differences do not prove that a specific irrigation method causes higher efficiency.
+- Recommendations are based on observed evidence and should be considered together with local agricultural conditions.
+
+---
+
+## 21. Future Scope
+
+Possible future enhancements include:
+
+- Integration with real-time agricultural datasets
+- Weather API integration
+- Real-time agricultural market-price information
+- Satellite and remote-sensing data
+- GIS-based agricultural mapping
+- Larger continuously updated datasets
+- Advanced forecasting models
+- Farmer-specific analytical reports
+- Mobile application integration
+- Multilingual support
+- Automated report generation
+
+These are proposed future enhancements and are not claimed as currently implemented features.
+
+---
+
+## 22. Conclusion
+
+Seasonal Agriculture Performance Analysis provides an integrated platform for analyzing agricultural performance using data analytics, statistical methods, machine learning, and interactive visualization.
+
+The project combines a React frontend with a FastAPI backend to present crop, seasonal, regional, profitability, water, environmental, statistical, and predictive analysis in one application.
+
+The system demonstrates how agricultural data can be transformed into meaningful analytical insights while maintaining a clear distinction between observed associations, statistical differences, and causal claims.
 
 ---
 
@@ -593,56 +666,34 @@ Recommendations are therefore framed as evidence-based evaluation or decision-su
 
 **Ajithkumar HM**
 
-Computer Science & Engineering Student
+Computer Science and Engineering
 
-Rajeev Institute of Technology (RIT), Hassan
+VOIS AICTE Internship Major Project
 
-VTU, Karnataka, India
+**Project:** Seasonal Agriculture Performance Analysis
 
-**VOIS AICTE Internship Major Project**
-
----
-
-## 📄 Project Files
-
-The repository includes:
-
-- Source code
-- Dataset
-- Jupyter Notebook
-- Backend API
-- Frontend dashboard
-- Project documentation
-- VOIS presentation
+**Domain:** Data Analytics & Agriculture
 
 ---
 
-## ⭐ Project Highlights
+## 📄 Project Information
 
-- 📊 4,000 agricultural observations
-- 🌾 8 crop species
-- 🌦️ 3 cropping seasons
-- 💧 4 irrigation modalities
-- 📈 Interactive analytics dashboard
-- 🔬 Statistical hypothesis testing
-- 🤖 Machine learning yield prediction
-- 💰 Profitability analysis
-- 🌱 Environmental analysis
-- 💧 Water-efficiency analysis
-- 📋 Evidence-based recommendations
-- 🔐 Strict non-causal analytical interpretation
-- 🌐 Full-stack deployment
+**Project Type:** Academic / Internship Major Project
 
----
+**Program:** VOIS AICTE Internship
 
-## 📌 Disclaimer
+**Domain:** Data Analytics & Agriculture
 
-This project is an academic and analytical study developed as part of the **VOIS AICTE Internship Major Project**.
+**Frontend:** React + TypeScript + Vite
 
-The findings are based on the supplied dataset and analytical methodology. Predictions and statistical results should be interpreted within the scope and limitations of the dataset.
+**Backend:** FastAPI + Python
 
----
+**Machine Learning:** Gradient Boosting Regressor
 
-## 📜 License
+**Deployment:** Render
 
-This project is developed for academic and internship purposes.
+**Author:** Ajithkumar HM
+
+**Live Demo:** https://seasonal-agriculture-frontend.onrender.com
+
+**GitHub:** https://github.com/Ajith-Kumar55/Seasonal-Agriculture-Performance-Analysis
