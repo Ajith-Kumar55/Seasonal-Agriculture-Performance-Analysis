@@ -469,27 +469,27 @@ def get_recommendations_page():
     recs = [
         {
             'id': '1',
-            'title': 'Transition from Flood to Drip & Sprinkler Micro-Irrigation',
+            'title': 'Evaluate Irrigation Systems for Water-Efficiency Improvement',
             'target_audience': 'Farmers & Agricultural Extension',
-            'recommendation': 'Adopt drip and sprinkler irrigation systems to maximize water use efficiency (kg/m³) and reduce excessive water expenditure.',
-            'rationale': 'Factorial ANOVA confirms micro-irrigation delivers significantly higher crop yield per cubic meter of water (p < 0.001).',
-            'expected_outcome': '25-35% reduction in total water consumption per hectare.'
+            'recommendation': 'Compare irrigation practices based on observed water-efficiency outcomes and local farm conditions rather than assuming one method is universally superior.',
+            'rationale': 'Two-Way ANOVA indicates statistically significant differences in water efficiency across irrigation methods (p < 0.001).',
+            'expected_outcome': 'Supports evidence-based evaluation of irrigation practices and water-management decisions.'
         },
         {
             'id': '2',
             'title': 'Implement Soil-Testing-Based Fertilizer Management',
             'target_audience': 'Policy Makers & Co-operatives',
-            'recommendation': 'Promote soil testing services before sowing to avoid commercial over-application of NPK fertilizers.',
-            'rationale': 'Fertilizer usage correlates strongly with operational costs (r = 0.5476) without showing positive correlation with net profit.',
-            'expected_outcome': '15-20% reduction in total operating costs per hectare.'
+            'recommendation': 'Promote soil testing before fertilizer application to support more targeted nutrient management and avoid unnecessary fertilizer use.',
+            'rationale': 'Fertilizer usage is positively associated with operating cost (Pearson r = 0.5476, p < 0.001), without establishing a causal effect on net profit.',
+            'expected_outcome': 'Supports more targeted fertilizer-management decisions and cost evaluation.'
         },
         {
             'id': '3',
-            'title': 'Restructure Zaid Cropping Patterns to Drought-Tolerant Varieties',
+            'title': 'Evaluate Zaid Cropping Patterns and Water Requirements',
             'target_audience': 'Farmers & Policy Planners',
-            'recommendation': 'Restrict water-intensive crops during Zaid season and incentivize short-duration pulses or oilseeds.',
-            'rationale': 'Zaid season experiences a 64.48% operating loss rate due to extreme thermal and water stress.',
-            'expected_outcome': 'Significant reduction in seasonal farm debt and crop failure rates.'
+            'recommendation': 'Review crop selection and water requirements during the Zaid season using observed profitability and seasonal conditions.',
+            'rationale': 'Zaid records the highest observed operating loss rate among the three seasons (64.48%).',
+            'expected_outcome': 'Supports seasonal crop-planning and water-management decisions.'
         }
     ]
     return {'recommendations': recs}
