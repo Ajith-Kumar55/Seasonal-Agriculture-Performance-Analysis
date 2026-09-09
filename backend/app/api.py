@@ -426,23 +426,23 @@ def get_findings_list():
                 'title': 'Structural Operating Deficit in Smallholder Agriculture',
                 'category': 'Financial Performance',
                 'finding': 'Across the dataset, 49.15% (1,966 farms) operate at an empirical financial loss where total production cost exceeds gross market revenue.',
-                'statistical_evidence': 'Mean Profit per Hectare = ₹-29,198.81/ha | Loss Count = 1,966 / 4,000 farms (49.15%)',
+                'statistical_evidence': 'Mean Profit per Hectare = ₹13,555.02/ha | Loss Count = 1,966 / 4,000 farms (49.15%)',
                 'business_impact': 'Highlights the necessity of evaluating economic returns per hectare rather than total farm revenue.'
             },
             {
                 'id': '2',
                 'title': 'Sugarcane Biomass Scale Disparity & RYI Normalization',
                 'category': 'Agronomic Measurement',
-                'finding': 'Sugarcane exhibits an unadjusted raw yield mean of 46.90 t/ha due to vegetative stalk biomass moisture, compared to dried edible grains (Rice 5.48 t/ha, Maize 3.51 t/ha, Wheat 5.39 t/ha).',
+                'finding': 'Sugarcane exhibits an unadjusted raw yield mean of 46.93 t/ha due to vegetative stalk biomass moisture, compared to dried edible grains (Rice 5.48 t/ha, Maize 3.51 t/ha, Wheat 5.39 t/ha).',
                 'statistical_evidence': 'Relative Yield Index (RYI) normalizes crop yield relative to crop species mean baseline (RYI = 1.0).',
                 'business_impact': 'Prevents misleading cross-crop comparisons by establishing species-normalized yield metrics.'
             },
             {
                 'id': '3',
-                'title': 'Micro-Irrigation Superiority in Water Efficiency',
+                'title': 'Irrigation Systems and Water Efficiency',
                 'category': 'Water & Irrigation',
-                'finding': 'Drip and sprinkler systems generate significantly higher crop yield per cubic meter of water (kg/m³) compared to flood irrigation.',
-                'statistical_evidence': 'Two-Way Factorial ANOVA F = 1842.15 (p < 0.001, ηₚ² = 0.764)',
+                'finding': 'Irrigation methods show significant differences in water efficiency, with irrigation system choice associated with different water-use outcomes.',
+                'statistical_evidence': 'Two-Way ANOVA: Irrigation F = 171.28 (p < 0.001); Season F = 22.63 (p < 0.001); Irrigation × Season F = 1.21 (p = 0.296, Not Significant)',
                 'business_impact': 'Provides empirical justification for expanding micro-irrigation subsidies.'
             },
             {
