@@ -198,7 +198,7 @@ export const MlPredictionPage: React.FC = () => {
                 </div>
               </div>
 
-              <ChartCard title="Random Forest Feature Importance Weights" subtitle="Predictive weight contribution per feature">
+              <ChartCard title="Gradient Boosting Feature Importance Weights" subtitle="Predictive weight contribution per feature">
                 <ResponsiveContainer width="100%" height={260}>
                   <BarChart data={featureImportanceData} layout="vertical">
                     <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
