@@ -15,7 +15,7 @@ import type {
   RecommendationItem
 } from '../types/api';
 
-const BASE_URL = '/api';
+const BASE_URL = 'https://seasonal-agriculture-api.onrender.com/api';
 
 async function fetchJson<T>(endpoint: string, params?: Record<string, string>): Promise<T> {
   const url = new URL(`${BASE_URL}${endpoint}`, window.location.origin);
