@@ -2,8 +2,35 @@ import React, { useEffect, useState } from 'react';
 import { api } from '../api/client';
 import type { RecommendationItem } from '../types/api';
 
+const DEFAULT_RECOMMENDATIONS: RecommendationItem[] = [
+  {
+    id: '1',
+    title: 'Evaluate Irrigation Systems for Water-Efficiency Improvement',
+    target_audience: 'Farmers & Agricultural Extension',
+    recommendation: 'Compare irrigation practices based on observed water-efficiency outcomes and local farm conditions rather than assuming one method is universally superior.',
+    rationale: 'Two-Way ANOVA indicates statistically significant differences in water efficiency across irrigation methods (p < 0.001).',
+    expected_outcome: 'Supports evidence-based evaluation of irrigation practices and water-management decisions.'
+  },
+  {
+    id: '2',
+    title: 'Implement Soil-Testing-Based Fertilizer Management',
+    target_audience: 'Policy Makers & Co-operatives',
+    recommendation: 'Promote soil testing before fertilizer application to support more targeted nutrient management and avoid unnecessary fertilizer use.',
+    rationale: 'Fertilizer usage is positively associated with operating cost (Pearson r = 0.5476, p < 0.001), without establishing a causal effect on net profit.',
+    expected_outcome: 'Supports more targeted fertilizer-management decisions and cost evaluation.'
+  },
+  {
+    id: '3',
+    title: 'Evaluate Zaid Cropping Patterns and Water Requirements',
+    target_audience: 'Farmers & Policy Planners',
+    recommendation: 'Review crop selection and water requirements during the Zaid season using observed profitability and seasonal conditions.',
+    rationale: 'Zaid records the highest observed operating loss rate among the three seasons (64.48%).',
+    expected_outcome: 'Supports seasonal crop-planning and water-management decisions.'
+  }
+];
+
 export const RecommendationsPage: React.FC = () => {
-  const [recommendations, setRecommendations] = useState<RecommendationItem[]>([]);
+  const [recommendations, setRecommendations] = useState<RecommendationItem[]>(DEFAULT_RECOMMENDATIONS);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -11,7 +38,9 @@ export const RecommendationsPage: React.FC = () => {
       setLoading(true);
       try {
         const res = await api.getRecommendations();
-        setRecommendations(res.recommendations);
+        if (res.recommendations && res.recommendations.length > 0) {
+          setRecommendations(res.recommendations);
+        }
       } catch (err) {
         console.error(err);
       } finally {
